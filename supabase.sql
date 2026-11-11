@@ -35,7 +35,7 @@ revoke all on public.orders from anon;
 -- ¿Quien consulta es el administrador?
 create or replace function public.is_admin() returns boolean
 language sql stable as $$
-  select lower(coalesce(auth.jwt()->>'email','')) = lower('TU_CORREO_ADMIN')
+  select lower(coalesce(auth.jwt()->>'email','')) = lower('josesalcedl818@gmail.com')
 $$;
 
 -- Políticas: el admin hace todo; el público solo ve ganadores
